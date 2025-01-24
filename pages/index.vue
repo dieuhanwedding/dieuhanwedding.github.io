@@ -2,17 +2,24 @@
 definePageMeta({
   layout: 'cms-layout',
 });
+useHead({
+  link: [
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Marmelad&family=Oooh+Baby&display=swap'
+    }
+  ]
+});
 </script>
 <template>
-  <head> <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet"> </head>
-    <div>
-      <CoupleBoard />
-      <EventBoard />
-    </div>
+  <Hero />
+  <CoupleBoard />
+  <EventBoard />
+  <Gallery />
+  <GiftBoard />
 </template>
 <style>
   body {
-    padding-top: 100px;
     font-family: 'Open Sans', sans-serif;
   }
 </style>

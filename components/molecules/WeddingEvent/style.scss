@@ -1,10 +1,9 @@
 
 .section {
   border: none;
-  color: red;
 
   .container {
-    border: 1px solid red;
+    border: 1px solid #ee8584;
     background: white;
 
     &::before {
@@ -12,10 +11,9 @@
       position: absolute;
       left: 0.5rem;
       top: 0.5rem;
-      border: 1px solid red;
+      border: 1px solid #ee8584;
       width: calc(100% + 2px);
       height: calc(100% + 2px);
-      animation: steam 30s linear infinite;
     }
 
     // ::before {

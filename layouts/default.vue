@@ -3,6 +3,8 @@
 <template>
   <div>
     <Header/>
-    <slot />
+    <main class="relative container mx-auto py-8"></main>
+      <slot />
+    <Footer />
   </div>
 </template>

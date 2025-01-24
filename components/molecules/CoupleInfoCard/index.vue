@@ -14,24 +14,24 @@ const props = withDefaults(
   {
     data: (): CoupleInfoCardProps => ({
       name: 'Dương Hân',
-      avatar: '/images/couple/bride.jpeg',
+      avatar: '/images/couple/bride.webp',
       title: 'Cô dâu',
-      description: 'Dương Hân là top 3 hoa khôi gia đình (top 1 lần lượt là mẹ và chị). Từ lúc 3 tuổi đã thành thạo hai ngôn ngữ là Tiếng Việt và tiếng Kinh. Trong suốt khoảng thời gian ở Trường Mẫu giáo đã liên tục đứng top 1 thành tích Phiếu bé ngoan do Nhà trường tổ chức. Nhược điểm duy nhất là hay dỗi.',
+      description: 'Cô dâu Hân Hân là top 3 hoa khôi gia đình (top 1 và 2 lần lượt là mẹ và chị gái). Từ lúc 3 tuổi đã thành thạo hai ngôn ngữ là Tiếng Việt và Tiếng Kinh. Đạt thành tích Top 1 Phiếu bé ngoan ở trường mẫu giáo. Nhược điểm duy nhất là hay dỗi.',
     }),
   },
 );
 
 </script>
 <template>
-  <div class="group flex flex-col items-center justify-center space-y-4 md:w-1/3 p-6 relative overflow-hidden">
-    <div class="overflow-hidden w-full h-full">
-      <img src="/images/couple/groom.jpeg" alt="Couple" class="couple-thumb w-full object-cover"/>
+  <div class="group flex-1 max-w-96 items-center justify-center md:space-y-0 md:w-1/3 relative rounded">
+    <div class="overflow-hidden w-full h-full rounded">
+      <img :src="data.avatar" :alt="data.title" class="couple-thumb w-full object-cover" loading="eager"/>
     </div>
-    <div class="content hidden group-hover:flex flex-col flex-1 space-y-2 text-center bg-[rgba(255,255,255,0.7)] absolute top-0 left-0 w-full h-full p-8 rounded">
-      <div class="content">
-        <span class="text-lg">{{data.title}}</span>
-        <h2 class="text-3xl md-text-6xl">{{data.name}}</h2>
-        <p class="text-lg text-center mt-6">{{ data.description }}</p>
+    <div class="content hidden group-hover:flex space-y-2 text-center bg-[rgba(255,255,255,0.8)] absolute top-0 left-0 w-full h-full pt-8 pl-8 pr-10 pb-10">
+      <div class="wrapper p-4 w-full h-full relative flex flex-col items-center justify-center space-y-4">
+        <span class="text-lg uppercase">{{data.title}}</span>
+        <h2 class="text-3xl md-text-6xl uppercase">{{data.name}}</h2>
+        <p class="text-base text-center mt-6 font-thin">{{ data.description }}</p>
       </div>
     </div>
   </div>
@@ -42,10 +42,23 @@ const props = withDefaults(
   }
 
   .group:hover .couple-thumb {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
 
   .content {
     transition: opacity 0.3s;
+
+    .wrapper{
+      border: 1px solid red;
+
+      &::after {
+      content: '';
+      position: absolute;
+      border: 1px solid red;
+      top: 0.5rem;
+      left: 0.5rem;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+    }}
   }
 </style>
