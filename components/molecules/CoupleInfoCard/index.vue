@@ -30,10 +30,10 @@ withDefaults(
       <img :src="data.avatar[index]" :alt="data.title" class="couple-thumb w-full object-cover" loading="eager"/>
     </div>
     <div class="content hidden group-hover:flex space-y-2 text-center bg-[rgba(255,255,255,0.8)] absolute top-0 left-0 w-full h-full pt-8 pl-8 pr-10 pb-10">
-      <div class="wrapper p-4 w-full h-full relative flex flex-col items-center justify-center space-y-4">
+      <div class="wrapper p-4 w-full h-full relative flex flex-col items-center justify-center space-y-4 text-primary">
         <span class="text-lg uppercase">{{data.title}}</span>
         <h2 class="text-3xl md-text-6xl uppercase">{{data.name}}</h2>
-        <p class="text-base text-center mt-6 font-thin">{{ data.description }}</p>
+        <p class="text-base text-center mt-6 font-light">{{ data.description }}</p>
       </div>
     </div>
   </div>

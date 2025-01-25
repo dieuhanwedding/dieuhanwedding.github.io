@@ -51,8 +51,8 @@ onUnmounted(() => {
       Vợ chồng mình xin phép để ở đây một vài tấm hình ngẫu nhiên, còn rất nhiều hình nữa sẽ trình chiếu trong đám cưới. Rất mong bạn có thể đến chung vui và cùng ghi lại những khoảnh khắc đẹp nhất với vợ chồng mình.
     </p>
 
-    <div class="container mx-auto columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 relative">
-      <div v-for="(image, index) in visibleImages" :key="index" class="mb-4">
+    <div class="container mx-auto columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-0 md:gap-4 relative">
+      <div v-for="(image, index) in visibleImages" :key="index" class="md:mb-4">
         <img :src="image" alt="gallery image" class="w-full h-auto object-cover" loading="lazy"/>
       </div>
       <div class="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-white to-transparent"></div>

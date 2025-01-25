@@ -9,7 +9,18 @@ const data = [
     eventAddress: "Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình",
     calendarEventSrc:
       "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới bạn Hân&dates=20250206T110000/20250206T130000&details=Tiệc cưới bạn Hân&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
-    googleMapLink: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
+    googleMapLink: [
+      {
+        icon: "home",
+        title: "Nhà cô dâu",
+        url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
+      },
+      {
+        icon: "restaurant",
+        title: "Hôn trường",
+        url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
+      },
+    ],
     isExpanded: true,
   },
   {
@@ -21,7 +32,18 @@ const data = [
     eventAddress: "Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình",
     calendarEventSrc:
       "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới bạn Diệu &dates=20250207T110000/20250207T130000&details=Tiệc cưới bạn Diệu&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
-    googleMapLink: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
+      googleMapLink: [
+      {
+        icon: "home",
+        title: "Nhà chú rể",
+        url: "https://maps.app.goo.gl/HvgeepVoxUvkGXLp8",
+      },
+      {
+        icon: "restaurant",
+        title: "Hôn trường",
+        url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
+      },
+    ],
     isExpanded: true,
   },
 ];

@@ -7,7 +7,11 @@
     eventLocation?: string;
     eventAddress?: string;
     calendarEventSrc?: string;
-    googleMapLink?: string;
+    googleMapLink?: {
+        icon: string;
+        title: string;
+        url: string;
+    }[];
     isExpanded?: boolean;
   };
 
@@ -22,7 +26,18 @@
       eventLocation: 'Tư gia nhà nữ',
       eventAddress: 'Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình',
       calendarEventSrc: 'https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới nhà Nữ&dates=20250206T110000/20250206T130000&details=Tiệc cưới nhà Nữ&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml',
-      googleMapLink: 'https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9',
+      googleMapLink: [
+        {
+          icon: 'home',
+          title: 'Nhà cô dâu',
+          url: 'https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9',
+        },
+        {
+          icon: 'restaurant',
+          title: 'Hôn trường',
+          url: 'https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9',
+        },
+      ],
       isExpanded: true,
     }),
   });
@@ -34,12 +49,8 @@
     window.open(props.data.calendarEventSrc, '_blank');
   };
 
-  const handleOpenHomeMap = () => {
-    window.open(props.data.googleMapLink, '_blank');
-  };
-
-  const handleOpenRestaurantMap = () => {
-    window.open(props.data.googleMapLink, '_blank');
+  const handleOpenMap = (data: any) => {
+    window.open(data.url, '_blank');
   };
 </script>
 
@@ -72,16 +83,12 @@
               </span>
             </template>
             <template #icon>
-              <p />
+              <p/>
             </template>
             <div class="flex flex-col space-y-3">
-              <p class="flex items-center cursor-pointer underline" @click="handleOpenHomeMap">
-                <Icon name="home" class="mr-1" />
-                Nhà chú rể
-              </p>
-              <p class="flex items-center cursor-pointer underline" @click="handleOpenRestaurantMap">
-                <Icon name="restaurant" class="mr-1" />
-                Hôn trường
+              <p v-for="(link, index) in data.googleMapLink" :key="index" class="flex items-center cursor-pointer underline" @click="handleOpenMap(link)">
+                <Icon :name="link.icon" class="mr-1" />
+                {{ link.title }}
               </p>
             </div>
           </CollapseTag>

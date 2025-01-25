@@ -1,14 +1,14 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'cms-layout',
+  layout: "cms-layout",
 });
 useHead({
   link: [
     {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Marmelad&family=Oooh+Baby&display=swap'
-    }
-  ]
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Marmelad&family=Oooh+Baby&display=swap",
+    },
+  ],
 });
 </script>
 <template>
@@ -18,9 +18,17 @@ useHead({
   <Gallery />
   <GiftBoard />
   <FloatingMusicButton />
+  <HeartRain />
 </template>
 <style>
-  body {
-    font-family: 'Open Sans', sans-serif;
-  }
+body {
+  font-family: "Open Sans", sans-serif;
+}
+#events,
+#gallery,
+#couples,
+#hero,
+#giftbox {
+  scroll-margin-top: 78px;
+}
 </style>

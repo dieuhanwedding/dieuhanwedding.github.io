@@ -4,7 +4,7 @@ import { defineProps, defineEmits, ref, watch } from "vue";
 const props = defineProps({
   text: {
     type: String,
-    required: true,
+    required: false,
   },
   isOpenProp: {
     type: Boolean,

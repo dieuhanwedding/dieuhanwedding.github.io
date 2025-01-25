@@ -7,8 +7,19 @@
     >
       <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-6 justify-between w-full">
-        <a href="#couple" class="flex items-center text-3xl font-semibold">
-          D<span class="text-xl">♡</span>H
+        <a href="#hero" class="flex items-center text-3xl font-semibold">
+          D<svg
+            width="23px"
+            height="23px"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="heart-icon"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            /></svg
+          >H
         </a>
         <ul class="flex space-x-6 items-center">
           <li>
@@ -25,8 +36,19 @@
 
       <!-- Mobile Menu -->
       <div class="flex items-center md:hidden w-full justify-between">
-        <a href="#couple" class="flex items-center text-3xl font-semibold">
-          D<span class="text-xl">♡</span>H
+        <a href="#hero" class="flex items-center text-3xl font-semibold">
+          D<svg
+            width="23px"
+            height="23px"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="heart-icon"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            /></svg
+          >H
         </a>
         <button @click="toggleMenu" class="text-2xl">☰</button>
       </div>
@@ -41,13 +63,19 @@
         <button @click="toggleMenu" class="self-end text-2xl">✖</button>
         <ul class="space-y-4">
           <li>
-            <a href="#events" class="hover:text-blue-500"> Sự kiện cưới </a>
+            <a href="#events" class="hover:text-blue-500" @click="toggleMenu">
+              Sự kiện cưới
+            </a>
           </li>
           <li>
-            <a href="#gallery" class="hover:text-blue-500"> Album Hình Cưới </a>
+            <a href="#gallery" class="hover:text-blue-500" @click="toggleMenu">
+              Album Hình Cưới
+            </a>
           </li>
           <li>
-            <a href="#giftbox" class="hover:text-blue-500"> Mừng cưới </a>
+            <a href="#giftbox" class="hover:text-blue-500" @click="toggleMenu">
+              Mừng cưới
+            </a>
           </li>
         </ul>
       </div>
