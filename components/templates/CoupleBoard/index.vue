@@ -31,7 +31,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="couple" class="container mx-auto relative lg:-mt-36 z-40">
+  <section id="couple" class="container mx-auto relative -mt-16 lg:-mt-36 z-40">
     <div class="flex flex-col md:flex-row items-center justify-center space-y-4 pb-12 md:space-y-0 md:space-x-4 p-8">
       <CoupleInfoCard v-for="(person, index) in data" :key="index" :data="person" :index="currentAvatarIndex"/>
     </div>

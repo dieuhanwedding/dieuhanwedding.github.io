@@ -1,5 +1,12 @@
 <script setup lang="ts">
-const targetTime = new Date("2025-02-06T11:00:00").getTime();
+const targetTime = ref(new Date("2025-02-06T11:00:00").getTime());
+
+const now = new Date();
+if (now.getFullYear() === 2025 && now.getMonth() === 1 && now.getDate() === 6) {
+  targetTime.value = new Date("2025-02-07T11:00:00").getTime();
+}
+
+const isPastTargetTime = computed(() => Date.now() > targetTime.value);
 
 const days = ref(0);
 const hours = ref(0);
@@ -8,7 +15,7 @@ const seconds = ref(0);
 
 const updateCountdown = () => {
   const now = Date.now();
-  const diff = targetTime - now;
+  const diff = targetTime.value - now;
 
   if (diff <= 0) {
     days.value = 0;
@@ -46,7 +53,7 @@ onBeforeUnmount(() => {
       <p class="text-2xl uppercase">Save the Date</p>
       <h1 class="text-4xl font-semibold font-serif">Quang Diệu &amp; Dương Hân</h1>
       <p class="hero-date relative text-2xl py-8">06 tháng 02 năm 2025</p>
-      <div class="flex justify-center space-x-8 text-3xl pt-3 uppercase">
+      <div class="flex justify-center space-x-8 text-3xl pt-3 uppercase" v-if="!isPastTargetTime">
         <div>
           <span class="block font-bold">{{ days }}</span>
           <span class="text-base">Ngày</span>
