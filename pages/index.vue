@@ -6,7 +6,7 @@ useHead({
   link: [
     {
       rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css2?family=Marmelad&family=Oooh+Baby&display=swap",
+      href: "https://fonts.googleapis.com/css2?family=Marmelad&family=Oooh+Baby&family=OpenSans&display=swap",
     },
   ],
 });
