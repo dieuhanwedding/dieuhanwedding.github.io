@@ -16,6 +16,13 @@ export default defineNuxtConfig({
     buildAssetsDir: 'assets',
     head: {
       title: 'Diệu ♡ Hân Wedding',
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico?v=2'
+        }
+      ]
     }
   },
   css: ['@/assets/styles/tailwind.css'],
