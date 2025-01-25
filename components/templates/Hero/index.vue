@@ -69,10 +69,6 @@ onBeforeUnmount(() => {
 </template>
 <style scoped>
 .hero {
-  background-image: url("/images/background/wall-1.jpg");
-  background-size: cover;
-  background-position: center;
-
   &::before {
     content: "";
     position: absolute;

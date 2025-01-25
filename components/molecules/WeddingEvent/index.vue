@@ -15,7 +15,7 @@
     data: WeddingEventProps;
   }>(), {
     data: (): WeddingEventProps=> ({
-      eventImage: '/images/thumbs/TiecCuoiNhaNu.jpg',
+      eventImage: '/images/thumbs/TiecCuoiNhaNu.webp',
       eventTitle: 'Tiệc cưới nhà Nữ',
       eventDesc: '',
       eventTime: '11:00 06/02/2025',
@@ -30,58 +30,22 @@
   const emit = defineEmits(['update:isExpanded']);
   const isExpanded = ref(props.data.isExpanded);
 
-  const toggleExpand = () => {
-    isExpanded.value = !isExpanded.value;
-    emit('update:isExpanded', isExpanded.value);
-  };
-
   const handleAddToCalendar = () => {
     window.open(props.data.calendarEventSrc, '_blank');
   };
 
-  const handleOpenGoogleMap = () => {
+  const handleOpenHomeMap = () => {
     window.open(props.data.googleMapLink, '_blank');
   };
 
-  // const checkIfInViewport = () => {
-  //   const element = document.getElementById('events');
-  //   if (element) {
-  //     const rect = element.getBoundingClientRect();
-  //     return (
-  //       rect.top >= 0 &&
-  //       rect.left >= 0 &&
-  //       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-  //       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  //     );
-  //   }
-  //   return false;
-  // };
-
-  // const handleScroll = () => {
-  //   if (checkIfInViewport()) {
-  //     if (!isExpanded.value) {
-  //       toggleExpand();
-  //     }
-  //   } else {
-  //     if (isExpanded.value) {
-  //       toggleExpand();
-  //     }
-  //   }
-  // };
-
-  // onMounted(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   handleScroll(); // Initial check
-  // });
-
-  // onUnmounted(() => {
-  //   window.removeEventListener('scroll', handleScroll);
-  // });
+  const handleOpenRestaurantMap = () => {
+    window.open(props.data.googleMapLink, '_blank');
+  };
 </script>
 
 <template>
   <section class="section bg-white pt-6 pl-6 pr-8 pb-8">
-    <div class="container flex flex-col items-center md:items-start md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-8 relative text-primary">
+    <div class="container flex flex-col items-center md:items-start md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 relative text-primary">
       <img :src="data.eventImage" size="(max-width: 100px)" alt="Wedding Event" class="event-thumb h-24 max-w-24 w-full object-cover rounded-full" loading="lazy"/>
       <ul class="content flex flex-col flex-1 space-y-2 text-center md:text-start">
         <li class="event-title text-xl md:text-3xl font-bold uppercase">{{ data.eventTitle }}</li>
@@ -92,9 +56,35 @@
         <li class="flex space-x-1 align-center text-start">
           {{data.eventLocation}} - {{data.eventAddress}}
         </li>
-        <li class="text-start flex flex-col w-full space-y-2 pt-2 md:flex-row md:space-x-2 md:space-y-0" v-if="isExpanded">
-          <Button @click="handleAddToCalendar">Thêm vào lịch</Button>
-          <Button @click="handleOpenGoogleMap">Xem bản đồ</Button>
+        <li class="text-start flex flex-col w-full space-y-2 pt-2 xl:flex-row xl:space-x-2 xl:space-y-0" v-if="isExpanded">
+          <!-- <Button @click="handleAddToCalendar">Thêm vào lịch</Button>
+          <Button @click="handleOpenGoogleMap">Đường đến nhà</Button>
+          <Button @click="handleOpenGoogleMap">Đường đến hôn trường</Button> -->
+          <button class="flex border border-primary rounded p-2 px-3 items-center cursor-pointer" @click="handleAddToCalendar">
+            <Icon name="calendar" class="mr-1" />
+            Thêm vào lịch
+          </button>
+          <CollapseTag>
+            <template #title>
+              <span class="flex items-center justify-center cursor-pointer">
+                <Icon name="location" class="mr-1" />
+                Xem Bản đồ
+              </span>
+            </template>
+            <template #icon>
+              <p />
+            </template>
+            <div class="flex flex-col space-y-3">
+              <p class="flex items-center cursor-pointer underline" @click="handleOpenHomeMap">
+                <Icon name="home" class="mr-1" />
+                Nhà chú rể
+              </p>
+              <p class="flex items-center cursor-pointer underline" @click="handleOpenRestaurantMap">
+                <Icon name="restaurant" class="mr-1" />
+                Hôn trường
+              </p>
+            </div>
+          </CollapseTag>
         </li>
       </ul>
     </div>

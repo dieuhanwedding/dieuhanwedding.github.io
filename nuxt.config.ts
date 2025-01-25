@@ -25,9 +25,10 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       svgLoader({
-        defaultExport: 'component'
+        defaultImport: 'component'
       })
     ],
+    assetsInclude: ["**/*.mp3"],
     css: {
       preprocessorOptions: {
         scss: {

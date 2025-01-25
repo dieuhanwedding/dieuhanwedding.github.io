@@ -2,14 +2,14 @@
 const data = [
   {
     title: "Mừng cưới Chú rể",
-    qrCode: "/images/bank/groom.png",
+    qrCode: "/images/bank/groom.webp",
     bank: "TPBank (TienPhongBank)",
     account: "668 1711 1994",
     name: "Đỗ Trung Quang Diệu",
   },
   {
     title: "Mừng cưới Cô dâu",
-    qrCode: "/images/bank/bride.png",
+    qrCode: "/images/bank/bride.webp",
     bank: "TPBank (TienPhongBank)",
     account: "668 2808 1999",
     name: "Dương Thị Hân",
@@ -22,7 +22,7 @@ const data = [
     <h2 class="text-3xl md-text-6xl uppercase text-primary">Hộp mừng cưới</h2>
     <Divider />
     <p class="text-lg italic text-center mt-6">
-      Chúng mình rất vui khi được chia sẻ niềm vui cùng với bạn. Nếu có thể, bạn
+      Vợ chồng mình rất vui khi được chia sẻ niềm hạnh phúc này. Nếu có thể, bạn
       hãy tới tham dự đám cưới, chung vui và mừng cưới trực tiếp cho chúng mình
       nha. Cảm ơn bạn rất nhiều!.
     </p>
@@ -32,7 +32,7 @@ const data = [
       <GiftBox v-for="item in data" :data="item" :key="item.title" />
     </div>
     <p class="thankyou text-3xl italic text-center mt-6 text-primary">
-      Thanks for your love and support!
+      Thanks for your love!
     </p>
   </section>
 </template>

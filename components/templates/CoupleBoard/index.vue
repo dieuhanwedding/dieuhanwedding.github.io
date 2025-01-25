@@ -1,24 +1,39 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue';
 const data = [
   {
     title: 'Chú rể',
     name: 'Quang Diệu',
-    avatar: '/images/couple/groom.webp',
+    avatar: ['/images/couple/groom-ava1.webp', '/images/couple/groom-ava2.webp'],
     description: 'Chú rể Quang Diệu là công dân nước Việt Nam, nói thành thạo hai thứ tiếng, cụ thể là Tiếng Việt và Tiếng Mẹ đẻ. Đặc biệt năm 18 tuổi được Nhà nước trao tặng Căn cước công dân. Hiện Chú rể đang nằm trong top 8 tỷ người thông minh nhất Thế giới. Điểm yếu duy nhất là ngủ vẫn phải nhắm mắt.',
   },
   {
     name: 'Dương Hân',
-    avatar: '/images/couple/bride.webp',
+    avatar: ['/images/couple/bride-ava1.webp', '/images/couple/bride-ava2.webp'],
     title: 'Cô dâu',
-    description: 'Cô dâu Hân Hân là top 3 hoa khôi gia đình (top 1 và 2 lần lượt là mẹ và chị gái). Từ lúc 3 tuổi đã thành thạo hai ngôn ngữ là Tiếng Việt và Tiếng Kinh. Đạt thành tích Top 1 Phiếu bé ngoan ở trường mẫu giáo. Có sở thích đi bắt chuồn chuồn. Nhược điểm duy nhất là hay dỗi.',
+    description: 'Cô dâu Hân Hân là top 3 hoa khôi gia đình (top 1 và 2 lần lượt là mẹ và chị gái). Từ lúc 3 tuổi đã thành thạo hai ngôn ngữ là Tiếng Việt và Tiếng Kinh. Đạt thành tích Top 1 Phiếu bé ngoan ở trường mẫu giáo, 12 năm liền được tuyển thẳng lên lớp. Nhược điểm duy nhất là hay dỗi.',
   },
 ];
+
+const currentAvatarIndex = ref(0);
+let intervalId: ReturnType<typeof setInterval>;
+
+onMounted(() => {
+  // Thay đổi ảnh sau mỗi 3 giây
+  intervalId = setInterval(() => {
+    currentAvatarIndex.value = (currentAvatarIndex.value + 1) % 2; // 2 là số ảnh (avatar1 và avatar2)
+  }, 5000);
+});
+
+onUnmounted(() => {
+  clearInterval(intervalId);
+});
 </script>
 
 <template>
   <section id="couple" class="container mx-auto relative lg:-mt-36 z-40">
     <div class="flex flex-col md:flex-row items-center justify-center space-y-4 pb-12 md:space-y-0 md:space-x-4 p-8">
-      <CoupleInfoCard v-for="(person, index) in data" :key="index" :data="person" />
+      <CoupleInfoCard v-for="(person, index) in data" :key="index" :data="person" :index="currentAvatarIndex"/>
     </div>
     <div class="couple-heart absolute left-1/2 bottom-0 rounded-full overflow-hidden p-2 bg-white">
       <img src="/images/couple/heart.jpg" alt="Couple Heart" class="w-20 h-20 rounded-full opacity-50" loading="lazy" />

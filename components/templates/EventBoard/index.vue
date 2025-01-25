@@ -1,26 +1,26 @@
 <script setup lang="ts">
 const data = [
   {
-    eventImage: "/images/thumbs/TiecCuoiNhaNu.jpg",
+    eventImage: "/images/thumbs/TiecCuoiNhaNu.webp",
     eventTitle: "Tiệc cưới nhà Nữ",
     eventDesc: "",
     eventTime: "11:00 06/02/2025",
     eventLocation: "Nhà văn hoá thôn Xuân Bồ",
     eventAddress: "Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình",
     calendarEventSrc:
-      "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới nhà Nữ&dates=20250206T110000/20250206T130000&details=Tiệc cưới nhà Nữ&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
+      "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới bạn Hân&dates=20250206T110000/20250206T130000&details=Tiệc cưới bạn Hân&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
     googleMapLink: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
     isExpanded: true,
   },
   {
-    eventImage: "/images/thumbs/TiecCuoiNhaNam.jpg",
+    eventImage: "/images/thumbs/TiecCuoiNhaNam.webp",
     eventTitle: "Tiệc cưới nhà Nam",
     eventDesc: "",
     eventTime: "11:00 07/02/2025",
     eventLocation: "Nhà văn hoá thôn Xuân Bồ",
     eventAddress: "Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình",
     calendarEventSrc:
-      "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới nhà Nữ&dates=20250206T110000/20250206T130000&details=Tiệc cưới nhà Nữ&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
+      "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới bạn Diệu &dates=20250207T110000/20250207T130000&details=Tiệc cưới bạn Diệu&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
     googleMapLink: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
     isExpanded: true,
   },

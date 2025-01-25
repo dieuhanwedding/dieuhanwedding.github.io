@@ -3,9 +3,11 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 // Danh sách ảnh
 const images = ref([
-  '/images/slide/1.jpg',
-  '/images/slide/2.jpg',
-  '/images/slide/3.jpg',
+  '/images/slide/001.webp',
+  '/images/slide/002.webp',
+  '/images/slide/003.webp',
+  '/images/slide/004.webp',
+  '/images/slide/005.webp',
 ]);
 
 const currentIndex = ref(0);

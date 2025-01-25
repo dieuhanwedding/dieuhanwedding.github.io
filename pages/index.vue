@@ -17,6 +17,7 @@ useHead({
   <EventBoard />
   <Gallery />
   <GiftBoard />
+  <FloatingMusicButton />
 </template>
 <style>
   body {
