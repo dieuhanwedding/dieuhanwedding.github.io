@@ -8,29 +8,31 @@ const images = Array.from({ length: totalImages }, (_, i) => {
   return `/images/gallery/${formattedNumber}.webp`;
 });
 
+// Ref to store shuffled images (shuffle once on mount)
+const shuffledImages = ref([]);
 // Ref to store visible images
-const visibleImages = ref(images);
+const visibleImages = ref([]);
 
-// Function to shuffle the images and pick a specific number
-const getRandomImages = (count) => {
-  const shuffledIndexes = [...Array(images.length).keys()].sort(() => Math.random() - 0.5);
-  return shuffledIndexes.slice(0, count).map(index => images[index]);
+// Function to shuffle the images (only called once)
+const shuffleImages = () => {
+  shuffledImages.value = [...images].sort(() => Math.random() - 0.5);
 };
 
 // Function to update visible images based on screen size
 const updateVisibleImages = () => {
   const width = window.innerWidth;
   if (width <= 640) {
-    visibleImages.value = getRandomImages(5); // Mobile: 5 images
+    visibleImages.value = shuffledImages.value.slice(0, 5); // Mobile: 5 images
   } else if (width <= 1024) {
-    visibleImages.value = getRandomImages(10); // Tablet: 10 images
+    visibleImages.value = shuffledImages.value.slice(0, 10); // Tablet: 10 images
   } else {
-    visibleImages.value = getRandomImages(20); // Desktop: 20 images
+    visibleImages.value = shuffledImages.value.slice(0, 20); // Desktop: 20 images
   }
 };
 
-// Initialize visible images when component is mounted
+// Initialize shuffled images and visible images when component is mounted
 onMounted(() => {
+  shuffleImages(); // Shuffle images once
   updateVisibleImages();
   // Watch for window resize events
   window.addEventListener('resize', updateVisibleImages);

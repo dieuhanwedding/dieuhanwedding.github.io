@@ -76,7 +76,7 @@ const nextTrack = () => {
 </script>
 
 <template>
-  <div class="floating-music-button fixed bottom-4 left-4 z-50">
+  <div class="floating-music-button fixed bottom-4 left-4 z-50 flex items-center justify-center">
     <div class="wrapper">
       <button
         @click="
@@ -86,7 +86,7 @@ const nextTrack = () => {
                 ? nextTrack()
                 : playTrack(currentTrack || tracks[0]))
         "
-        class="bg-[#df4758] hover:bg-primary-dark text-white p-3 rounded-full shadow focus:outline-none relative"
+        class="bg-[#df4758] hover:bg-primary-dark text-white p-4 rounded-full shadow focus:outline-none relative"
       >
         <!-- Icon nốt nhạc khi chưa phát -->
         <Icon name="music" class="h-4 w-4" v-if="!isPlaying && !isPaused" />
@@ -96,6 +96,7 @@ const nextTrack = () => {
         <Icon name="next" class="h-4 w-4" v-if="isPaused" />
       </button>
     </div>
+    <!-- <p class="text-gray bg-white h-full text-xs text-center mt-1">Nhấn để nghe nhạc</p> -->
   </div>
 </template>
 

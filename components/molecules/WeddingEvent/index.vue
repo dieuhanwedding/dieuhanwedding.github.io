@@ -71,7 +71,7 @@
           <!-- <Button @click="handleAddToCalendar">Thêm vào lịch</Button>
           <Button @click="handleOpenGoogleMap">Đường đến nhà</Button>
           <Button @click="handleOpenGoogleMap">Đường đến hôn trường</Button> -->
-          <button class="flex border border-primary rounded p-2 px-3 items-center cursor-pointer" @click="handleAddToCalendar">
+          <button class="flex border w-full border-primary rounded p-2 px-3 items-center cursor-pointer" @click="handleAddToCalendar">
             <Icon name="calendar" class="mr-1" />
             Thêm vào lịch
           </button>
