@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const targetTime = ref(new Date("2025-02-06T11:00:00").getTime());
+const targetTime = ref(new Date("2025-03-23T17:30:00").getTime());
 
 const now = new Date();
 if (now.getFullYear() === 2025 && now.getMonth() === 1 && now.getDate() === 6) {

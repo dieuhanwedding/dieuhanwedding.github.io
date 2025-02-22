@@ -22,11 +22,11 @@ const shuffleImages = () => {
 const updateVisibleImages = () => {
   const width = window.innerWidth;
   if (width <= 640) {
-    visibleImages.value = shuffledImages.value.slice(0, 5); // Mobile: 5 images
+    visibleImages.value = shuffledImages.value.slice(0, 12); // Mobile: 5 images
   } else if (width <= 1024) {
-    visibleImages.value = shuffledImages.value.slice(0, 10); // Tablet: 10 images
+    visibleImages.value = shuffledImages.value.slice(0, 25); // Tablet: 10 images
   } else {
-    visibleImages.value = shuffledImages.value.slice(0, 20); // Desktop: 20 images
+    visibleImages.value = shuffledImages.value.slice(0, 42); // Desktop: 20 images
   }
 };
 
@@ -53,8 +53,8 @@ onUnmounted(() => {
       Vợ chồng mình xin phép để ở đây một vài tấm hình ngẫu nhiên, còn rất nhiều hình nữa sẽ trình chiếu trong đám cưới. Rất mong bạn có thể đến chung vui và cùng ghi lại những khoảnh khắc đẹp nhất với vợ chồng mình.
     </p>
 
-    <div class="container mx-auto columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-0 md:gap-4 relative">
-      <div v-for="(image, index) in visibleImages" :key="index" class="md:mb-4">
+    <div class="container mx-auto columns-3 md:columns-5 lg:columns-6 gap-2 md:gap-4 relative">
+      <div v-for="(image, index) in visibleImages" :key="index" class="mb-2 md:mb-4">
         <img :src="image" alt="gallery image" class="w-full h-auto object-cover" loading="lazy"/>
       </div>
       <div class="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-white to-transparent"></div>

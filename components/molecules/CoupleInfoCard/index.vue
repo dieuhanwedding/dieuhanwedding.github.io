@@ -27,7 +27,14 @@ withDefaults(
 <template>
   <div class="group flex-1 max-w-96 items-center justify-center md:space-y-0 md:w-1/3 relative rounded">
     <div class="overflow-hidden w-full h-full rounded">
-      <img :src="data.avatar[index]" :alt="data.title" class="couple-thumb w-full object-cover" loading="eager"/>
+      <img
+        v-for="img in data.avatar"
+        :src="img"
+        :alt="data.title"
+        class="couple-thumb w-full object-cover"
+        :class="{ 'block': index === data.avatar.indexOf(img), 'hidden': index !== data.avatar.indexOf(img) }"
+        loading="eager"
+      />
     </div>
     <div class="content hidden group-hover:flex space-y-2 text-center bg-[rgba(255,255,255,0.8)] absolute top-0 left-0 w-full h-full pt-8 pl-8 pr-10 pb-10">
       <div class="wrapper p-4 w-full h-full relative flex flex-col items-center justify-center space-y-4 text-primary">
