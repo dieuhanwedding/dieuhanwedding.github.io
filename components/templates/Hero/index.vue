@@ -52,7 +52,7 @@ onBeforeUnmount(() => {
     >
       <p class="text-2xl uppercase">Save the Date</p>
       <h1 class="text-4xl font-semibold font-serif">Quang Diệu &amp; Dương Hân</h1>
-      <p class="hero-date relative text-2xl py-8">06 tháng 02 năm 2025</p>
+      <p class="hero-date relative text-2xl py-8">23 tháng 03 năm 2025</p>
       <div class="flex justify-center space-x-8 text-3xl pt-3 uppercase" v-if="!isPastTargetTime">
         <div>
           <span class="block font-bold">{{ days }}</span>
