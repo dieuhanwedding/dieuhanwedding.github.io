@@ -16,6 +16,7 @@ useHead({
   <CoupleBoard />
   <EventBoard />
   <Gallery />
+  <Video />
   <GiftBoard />
   <FloatingMusicButton />
   <HeartRain />
