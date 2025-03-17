@@ -12,7 +12,7 @@ useHead({
   title: "DIỆU♡HÂN - 23/03/2025",
   meta: [
     { property: "og:title", content: "DIỆU♡HÂN - 23/03/2025" },
-    { property: "og:description", content: "Hãy cùng chờ đón ngày trọng đại của chúng tôi vào 23/03/2025!" },
+    { property: "og:description", content: "Diệu Hân Wedding - 23/03/2025!" },
     { property: "og:image", content: "https://dieuhanwedding.github.io/images/slide/001.webp" },
     { property: "og:image:width", content: "1200" },
     { property: "og:image:height", content: "630" },
