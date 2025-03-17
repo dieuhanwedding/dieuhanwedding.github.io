@@ -9,14 +9,26 @@ useHead({
       href: "https://fonts.googleapis.com/css2?family=Marmelad&family=Oooh+Baby&family=OpenSans&display=swap",
     },
   ],
+  title: "DIỆU ♡ HÂN-23/03/2025",
+  meta: [
+    { property: "og:title", content: "DIỆU ♡ HÂN-23/03/2025" },
+    { property: "og:description", content: "Hãy cùng chờ đón ngày trọng đại của chúng tôi vào 23/03/2025!" },
+    { property: "og:image", content: "https://dieuhanwedding.github.io/images/slide/001.webp" },
+    { property: "og:url", content: "https://dieuhanwedding.github.io/" },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "DIỆU ♡ HÂN-23/03/2025" },
+    { name: "twitter:image", content: "https://dieuhanwedding.github.io/images/slide/001.webp" },
+  ]
 });
 </script>
 <template>
+  <h1 class="h1-tag">DIỆU ♡ HÂN-23/03/2025</h1>
   <Hero />
   <CoupleBoard />
   <EventBoard />
   <Gallery />
-  <Video />
+  <!-- <Video /> -->
   <GiftBoard />
   <FloatingMusicButton />
   <HeartRain />
@@ -31,5 +43,9 @@ body {
 #hero,
 #giftbox {
   scroll-margin-top: 78px;
+}
+
+.h1-tag {
+  display: none;
 }
 </style>

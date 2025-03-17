@@ -1,51 +1,74 @@
 <script setup lang="ts">
 const data = [
   {
-    eventImage: "/images/thumbs/TiecCuoiNhaNu.webp",
-    eventTitle: "Tiệc cưới nhà Nữ",
-    eventDesc: "",
-    eventTime: "11:00 06/02/2025",
-    eventLocation: "Nhà văn hoá thôn Xuân Bồ",
-    eventAddress: "Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình",
-    calendarEventSrc:
-      "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới bạn Hân&dates=20250206T110000/20250206T130000&details=Tiệc cưới bạn Hân&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
-    googleMapLink: [
-      {
-        icon: "home",
-        title: "Nhà cô dâu",
-        url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
-      },
-      {
-        icon: "restaurant",
-        title: "Hôn trường",
-        url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
-      },
-    ],
-    isExpanded: true,
-  },
-  {
-    eventImage: "/images/thumbs/TiecCuoiNhaNam.webp",
-    eventTitle: "Tiệc cưới nhà Nam",
-    eventDesc: "",
-    eventTime: "11:00 07/02/2025",
-    eventLocation: "Nhà văn hoá thôn Xuân Bồ",
-    eventAddress: "Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình",
-    calendarEventSrc:
-      "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới bạn Diệu &dates=20250207T110000/20250207T130000&details=Tiệc cưới bạn Diệu&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
+      eventImage: "/images/thumbs/TiecCuoiNhaNu.webp",
+      eventTitle: "Tiệc báo hỷ",
+      eventDesc: "",
+      eventTime: "17:00 23/03/2025",
+      eventLocation: "TRUNG TÂM HỘI NGHỊ TIỆC CƯỚI SEVEN PALACE",
+      eventAddress: "496-498 Đường 2/9, Hoà Cường Nam, Hải Châu, Đà Nẵng",
+      calendarEventSrc:
+        "https://calendar.google.com/calendar/u/0/r/eventedit?text=TIỆC BÁO HỶ QUANG DIỆU-DƯƠNG HÂN&dates=20250323T170000/20250323T200000&details=Diệu Hân wedding&location=SEVEN PALACE 496-498 Đường 2/9 Hải Châu Đà Nẵng&sf=true&output=xml",
       googleMapLink: [
-      {
-        icon: "home",
-        title: "Nhà chú rể",
-        url: "https://maps.app.goo.gl/HvgeepVoxUvkGXLp8",
-      },
-      {
-        icon: "restaurant",
-        title: "Hôn trường",
-        url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
-      },
-    ],
-    isExpanded: true,
-  },
+        {
+          icon: "restaurant",
+          title: "SEVEN PALACE",
+          url: "https://maps.app.goo.gl/aaUMrkWjwepbcATm6",
+        },
+        // {
+        //   icon: "restaurant",
+        //   title: "Hôn trường",
+        //   url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
+        // },
+      ],
+      isExpanded: true,
+    },
+  // {
+  //   eventImage: "/images/thumbs/TiecCuoiNhaNu.webp",
+  //   eventTitle: "Tiệc cưới nhà Nữ",
+  //   eventDesc: "",
+  //   eventTime: "11:00 06/02/2025",
+  //   eventLocation: "Nhà văn hoá thôn Xuân Bồ",
+  //   eventAddress: "Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình",
+  //   calendarEventSrc:
+  //     "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới bạn Hân&dates=20250206T110000/20250206T130000&details=Tiệc cưới bạn Hân&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
+  //   googleMapLink: [
+  //     {
+  //       icon: "home",
+  //       title: "Nhà cô dâu",
+  //       url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
+  //     },
+  //     {
+  //       icon: "restaurant",
+  //       title: "Hôn trường",
+  //       url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
+  //     },
+  //   ],
+  //   isExpanded: true,
+  // },
+  // {
+  //   eventImage: "/images/thumbs/TiecCuoiNhaNam.webp",
+  //   eventTitle: "Tiệc cưới nhà Nam",
+  //   eventDesc: "",
+  //   eventTime: "11:00 07/02/2025",
+  //   eventLocation: "Nhà văn hoá thôn Xuân Bồ",
+  //   eventAddress: "Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình",
+  //   calendarEventSrc:
+  //     "https://calendar.google.com/calendar/u/0/r/eventedit?text=Tiệc cưới bạn Diệu &dates=20250207T110000/20250207T130000&details=Tiệc cưới bạn Diệu&location=Thôn Xuân Bồ, Xã Xuân Thuỷ, Huyện Lệ Thuỷ, Tỉnh Quảng Bình&sf=true&output=xml",
+  //     googleMapLink: [
+  //     {
+  //       icon: "home",
+  //       title: "Nhà chú rể",
+  //       url: "https://maps.app.goo.gl/HvgeepVoxUvkGXLp8",
+  //     },
+  //     {
+  //       icon: "restaurant",
+  //       title: "Hôn trường",
+  //       url: "https://maps.app.goo.gl/vdDQXFRJfd7jUVCY9",
+  //     },
+  //   ],
+  //   isExpanded: true,
+  // },
 ];
 </script>
 
